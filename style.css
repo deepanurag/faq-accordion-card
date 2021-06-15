@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background:linear-gradient(180deg,hsl(273, 75%, 66%) 0%, hsl(240, 73%, 65%) 100%);
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+.faq{
+    display: none;
+}
+.mobile{
+    display: none;
+}
+.container{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(255, 255, 255);
+    max-width: 920px;
+    min-height: 500px;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgb(49, 49, 49);
+}
+.image-area, .text-area{
+    min-height: 500px;
+    width: 460px;
+}
+.text-area{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    right: 0px;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.image-area{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 0px;
+    border-radius: 20px 0px 0px 20px;
+}
+.invisible{
+    display: none;
+    margin-top: 10px;
+    
+}
+
+.texts, .header{
+    background: rgb(255, 255, 255);
+    margin: 0px;
+    
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: rgb(255, 255, 255);
+    
+}
+.texts{
+    border-bottom: 2px solid hsl(240, 5%, 91%);
+    width: 350px;
+    position: relative;
+    color: hsl(240, 5%, 44%);
+    
+}
+.texts:hover{
+    color:orange;
+    cursor: pointer;
+}
+svg{
+    position: absolute;
+    right: 0px;
+}
+.for-centering{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    
+}
+.visible, .invisible, svg{
+    pointer-events: none;
+}
+
+
+
+
+/*image area*/
+.image-area{
+    background-image: url(images/illustration-woman-online-desktop.svg), url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat,no-repeat;
+    background-position-y: 65%,60%;
+    background-position-x: 650%,120%;
+}
+
+img{
+    z-index: 5;
+    position: absolute;
+    top: 45%;
+    left: -28%;
+}
+
+
+.invisible-made-visible{
+    display:block;
+    color:hsl(240, 8%, 60%);
+    font-size: 11.5px;
+}
+
+.bold{
+    font-weight: 700;
+    color: black;
+}
+
+
+
+.uparrow{
+    transform: rotate(180deg);
+}
+
+
+@media(max-width: 1080px) {
+    .container{
+        flex-direction: column;
+        width: 325px;
+        height: 535px;
+        position: relative;
+    }
+    .text-area{
+        
+        position:absolute;
+        bottom:-100px;
+        width: 325px;
+        padding: 0px;
+        min-height: 395px;
+        border-radius: 0px 0px 20px 20px;
+        
+        
+    }
+    .image-area{
+        
+        top:0px;
+        border-radius: 20px 20px 0px 0px;
+        height: 140px;
+        width: 325px;
+        max-width: 325px;
+        min-height: 140px;
+        
+
+    }
+    .mobile{
+        position: absolute;
+        left: 45%;
+        transform: translateX(-50%);
+        top: -90px;
+    }
+
+   .box{
+       display: none;
+   }
+    .texts{
+        width: 300px;
+    }
+    .for-centering{
+        position: absolute;
+        top:0;
+        transform: translateY(0%);
+        height: 395px;
+        padding: 0px;
+        padding-left: 15px;
+        padding-right: 15px;
+        overflow: scroll;
+        border-radius: 0px 0px 20px 20px ;
+    }
+    .header{
+        display: none;
+    }
+    .faq{
+     position: absolute;
+     z-index: 10;
+     left: 48%;
+     transform: translateX(-50%);
+     top:-120px;
+      
+    }
+    body{
+        min-height: 768px;
+        background-image: linear-gradient(180deg,hsl(273, 75%, 66%) 0vh, hsl(240, 73%, 65%) 100vh);
+        background-repeat: no-repeat;
+    }
+    .texts{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .faq{
+        display: block;
+    }
+    .mobile{
+        display: block;
+    }
+    ::-webkit-scrollbar{
+        display: none;
+    }
+  }
